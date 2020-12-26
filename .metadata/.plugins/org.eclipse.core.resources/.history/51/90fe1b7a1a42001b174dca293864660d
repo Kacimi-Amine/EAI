@@ -1,0 +1,9 @@
+package metier;
+
+import java.util.Date;
+
+public class Compte {
+	private Long code;
+	private double solde;
+	private Date dateCreation;
+}

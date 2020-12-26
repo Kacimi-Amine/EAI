@@ -1,0 +1,29 @@
+package test;
+
+import java.rmi.RemoteException;
+import java.util.List;
+
+import ws.BanqueServiceProxy;
+import ws.Compte;
+
+public class ClientWS {
+
+	public static void main(String[] args) throws RemoteException {
+		
+		BanqueServiceProxy proxy = new BanqueServiceProxy();
+		System.out.println(proxy.conversionEuroToDH(32));
+		Compte cp = proxy.getCompte(2L);
+		System.out.println(cp.getCode());
+		System.out.println(cp.getSolde());
+//		List<Compte> cptes = proxy.listComptes();
+//		
+//		cptes.forEach(c->{
+//		System.out.println("--------------");
+//		System.out.println(cp.getCode());
+//		System.out.println(cp.getSolde());
+//		});
+		
+		
+	}
+
+}
